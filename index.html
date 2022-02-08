@@ -5419,7 +5419,22 @@ img.emoji {
          
            
     </div> 
-             
+             <!--  评论区  -->
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'cf72647a48c2ce1fc4ac',
+    clientSecret: '7ac6fec536ae42969b8a8e6eaf26a504b458114b',
+    repo: 'CS_MD',
+    owner: 'zjgsuzjx',
+    admin: ['zjgsuzjx'],
+    // facebook-like distraction free mode
+    distractionFreeMode: false
+  })
+</script>
             <footer class="main-footer footer-type-1 text-xs">
                 <div id="footer-tools" class="d-flex flex-column">
                     <a href="javascript:/" id="go-to-up" class="btn rounded-circle go-up m-1" rel="go-top">

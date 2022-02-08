@@ -362,7 +362,20 @@ img.emoji {
     	    		<h4 class="near-title">没有更多了...</h4>	
     	    	</div>
     	    	    	    </div>
-    	    
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+  <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>			
+var gitalk = new Gitalk({
+  clientID: 'cf72647a48c2ce1fc4ac',
+  clientSecret: '7ac6fec536ae42969b8a8e6eaf26a504b458114b',
+  repo: 'CS_MD',
+  owner: 'zjgsuzjx',
+  admin: ['zjgsuzjx'],
+  id: location.pathname,      // Ensure uniqueness and length less than 50
+  distractionFreeMode: false  // Facebook-like distraction free mode
+})
+
+gitalk.render('gitalk-container')			
 <!-- comments -->
 <div id="comments" class="comments">
 	<h1 id="comments-list-title" class="comments-title h5 mx-1 my-4">

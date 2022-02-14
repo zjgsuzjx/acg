@@ -50,11 +50,24 @@ img.emoji {
 <link rel="stylesheet" id="lightbox-css" href="/wp-content/themes/webstackpro/css/jquery.fancybox.min.css?ver=2.0406" type="text/css" media="all">
 <link rel="stylesheet" id="style-css" href="/wp-content/themes/webstackpro/css/style.css?ver=2.0406" type="text/css" media="all">
 <script type="text/javascript" src="/wp-content/themes/webstackpro/js/jquery.min.js?ver=2.0406" id="jquery-js"></script>
-<style>@media screen and (min-width: 970px){
+<style>
+@media screen and (min-width: 970px){
   .aplayer.aplayer-fixed .aplayer-body {
     z-index:999;
     left:220px!important;
   }
+.aplayer.aplayer-fixed .aplayer-list {
+    left: 220px!important;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    width: 400px;
+  }
+}
+.aplayer .aplayer-lrc .aplayer-lrc-contents p.aplayer-lrc-current {
+    color: #e03bd8!important;
+    font-size: 15px!important;
+    font-weight: bold!important;
 }
 .header-big .s-search #search-text {
 	color:black;
@@ -5447,7 +5460,7 @@ img.emoji {
  
 	<script>
 	 
-	swal('更新：1.夜间模式已修复（限主页）2.由于更换域名中，网站随时都有可能奔溃，建议过两三天再来。','\n\n点击屏幕任意处关闭','success'); function AddFavorite(title, url) {
+	swal('【重要更新】\n1.夜间模式已修复（限主页）\n2.域名已更新请收藏：https://myacg.xyz/\n3.已修复歌单显示问题','\n\n点击屏幕任意处关闭','success'); function AddFavorite(title, url) {
 	 
 	  try {
 	 

@@ -351,7 +351,7 @@ if(strPage() == "options-plugin.php" && GetQueryString("config") == "AliceStyle"
         
         if(key != val){
             
-            let url = SiteLink + "usr/plugins/AliceStyle/inc/api/img/?" + val;
+            let url = SiteLink + "AliceStyle/inc/api/img/?" + val;
             
             $("#as-save").after("<a href=\""+url+"\" class=\"btn primary\" id=\"as-url\"><i class=\"fa fa-send\"></i></a>");
         }

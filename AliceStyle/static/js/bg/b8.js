@@ -1,5 +1,5 @@
 new_element = document.createElement("style");
-new_element.innerHTML =("@keyframes colorChange{0%,100%{opacity:0}50%{opacity:.9}}#landscape{background-image:url('usr/plugins/AliceStyle/static/img/bg_StarrySky.png');position:fixed;top:0;width:100%;left:0;z-index:-1;height:100%;background-size:1000px 250px;background-repeat:repeat-x;background-position:center bottom}.filter{width:100%;height:100%;position:fixed;top:0;left:0;z-index:-1;background:#da7474;animation:colorChange 30s ease-in-out infinite;animation-fill-mode:both;mix-blend-mode:overlay}");
+new_element.innerHTML =("@keyframes colorChange{0%,100%{opacity:0}50%{opacity:.9}}#landscape{background-image:url('AliceStyle/static/img/bg_StarrySky.png');position:fixed;top:0;width:100%;left:0;z-index:-1;height:100%;background-size:1000px 250px;background-repeat:repeat-x;background-position:center bottom}.filter{width:100%;height:100%;position:fixed;top:0;left:0;z-index:-1;background:#da7474;animation:colorChange 30s ease-in-out infinite;animation-fill-mode:both;mix-blend-mode:overlay}");
 document.body.appendChild(new_element);
 
 document.writeln("<div id=\'landscape\'></div>");

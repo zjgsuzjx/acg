@@ -19,7 +19,7 @@
 <link rel="dns-prefetch" href="//ssl.captcha.qq.com">
 <link rel="dns-prefetch" href="//s.w.org">
 		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.5"}};
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.0\/svg\/","svgExt":".svg","source":{"concatemoji":"\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.5.12"}};
 			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
 		</script>
 		<style type="text/css">img.wp-smiley,
@@ -34,7 +34,7 @@ img.emoji {
 	background: none !important;
 	padding: 0 !important;
 }</style>
-	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.5.5" type="text/css" media="all">
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.5.12" type="text/css" media="all">
 <link rel="stylesheet" id="iconfont-css" href="/wp-content/themes/webstackpro/css/iconfont.css?ver=2.0406" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome-css" href="/wp-content/themes/webstackpro/css/all.min.css?ver=2.0406" type="text/css" media="all">
 <link rel="stylesheet" id="font-awesome4-css" href="/wp-content/themes/webstackpro/css/v4-shims.min.css?ver=2.0406" type="text/css" media="all">
@@ -45,11 +45,24 @@ img.emoji {
 <link rel="canonical" href="/2021/07/28/%e7%bd%91%e7%ab%99%e8%b4%a1%e7%8c%ae%e8%80%85%e9%b8%a3%e8%b0%a2%e5%90%8d%e5%8d%95/">
 <link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=%2F2021%2F07%2F28%2F%25e7%25bd%2591%25e7%25ab%2599%25e8%25b4%25a1%25e7%258c%25ae%25e8%2580%2585%25e9%25b8%25a3%25e8%25b0%25a2%25e5%2590%258d%25e5%258d%2595%2F">
 <link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=%2F2021%2F07%2F28%2F%25e7%25bd%2591%25e7%25ab%2599%25e8%25b4%25a1%25e7%258c%25ae%25e8%2580%2585%25e9%25b8%25a3%25e8%25b0%25a2%25e5%2590%258d%25e5%258d%2595%2F&#038;format=xml">
-<style>@media screen and (min-width: 970px){
+<style>@media screen and (min-width: 970px) {
   .aplayer.aplayer-fixed .aplayer-body {
-    z-index:999;
-    left:220px!important;
+    z-index: 999;
+    left: 220px !important;
   }
+
+  .aplayer.aplayer-fixed .aplayer-list {
+    left: 220px !important;
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    width: 400px;
+  }
+}
+.aplayer .aplayer-lrc .aplayer-lrc-contents p.aplayer-lrc-current {
+  color: #e03bd8 !important;
+  font-size: 15px !important;
+  font-weight: bold !important;
 }
 .header-big .s-search #search-text {
 	color:black;
@@ -106,11 +119,11 @@ img.emoji {
                 <div class="sidebar-logo border-bottom border-color">
                     <!-- logo -->
                     <div class="logo overflow-hidden">
-                        <a href="/" class="logo-expanded">
+                        <a href="/acg" class="logo-expanded">
                             <img src="https://img.zjgsuzjx.top/img/images/2021/06/03/604daa1da7bc3cd0cce99e25b0292ab4.png" height="40" class="logo-light" alt="MyACG">
 						    <img src="https://img.zjgsuzjx.top/img/images/2021/06/03/604daa1da7bc3cd0cce99e25b0292ab4.png" height="40" class="logo-dark d-none" alt="MyACG">
                         </a>
-                        <a href="/" class="logo-collapsed">
+                        <a href="/acg" class="logo-collapsed">
                             <img src="https://img.zjgsuzjx.top/img/images/2021/05/31/a7da6f8d4a1ff0c8a8a87094d198d368.th.jpg" height="40" class="logo-light" alt="MyACG">
 						    <img src="https://img.zjgsuzjx.top/img/images/2021/05/31/a7da6f8d4a1ff0c8a8a87094d198d368.th.jpg" height="40" class="logo-dark d-none" alt="MyACG">
                         </a>
@@ -170,6 +183,12 @@ img.emoji {
                                             </a>
                                         </li> 
                                                                             <li class="sidebar-item">
+                                            <a href="/#term-18" class="smooth">
+                                               <i class="fa fa-envira icon-fw icon-lg mr-2"></i>
+                                               <span>轻小说</span>
+                                            </a>
+                                        </li> 
+                                                                            <li class="sidebar-item">
                                             <a href="/#term-4" class="smooth">
                                                <i class="fa fa-download icon-fw icon-lg mr-2"></i>
                                                <span>动漫下载</span>
@@ -226,7 +245,8 @@ img.emoji {
                 <div class="border-top py-2 border-color">
                     <div class="flex-bottom">
                         <ul> 
-                            <li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280 sidebar-item"><a href="/postsite/"><i class="fa fa-link icon-fw icon-lg mr-2"></i>  投稿&#038;反馈</a></li>
+                            <li id="menu-item-379" class="menu-item menu-item-type-taxonomy menu-item-object-favorites menu-item-379 sidebar-item"><a href="/favorites/sitetrash/"><i class="fa fa-trash icon-fw icon-lg mr-2"></i>  失效归档</a></li>
+<li id="menu-item-280" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-280 sidebar-item"><a href="/postsite/"><i class="fa fa-link icon-fw icon-lg mr-2"></i>  投稿&#038;反馈</a></li>
  
                         </ul>
                     </div>
@@ -238,7 +258,7 @@ img.emoji {
 			<div class="navbar navbar-expand-md">
                 <div class="container-fluid p-0">
 
-                    <a href="/" class="navbar-brand d-md-none">
+                    <a href="/acg" class="navbar-brand d-md-none">
 						<img src="https://img.zjgsuzjx.top/img/images/2021/05/31/a7da6f8d4a1ff0c8a8a87094d198d368.th.jpg" class="logo-light" alt="MyACG">
 						<img src="https://img.zjgsuzjx.top/img/images/2021/05/31/a7da6f8d4a1ff0c8a8a87094d198d368.th.jpg" class="logo-dark d-none" alt="MyACG">
                     </a>
@@ -291,10 +311,10 @@ img.emoji {
 				<div class="panel-header mb-4">
     	        	    	        	<h1 class="h3 mb-3">网站贡献者鸣谢名单</h1>
     	        	<div class="d-flex flex-fill text-muted text-sm pb-4 border-bottom border-t">
-    	        	<span class="mr-3 d-none d-sm-block"><a href="/uncategorized/"><i class="iconfont icon-classification"></i> 未分类</a></span>    	        	<span class="mr-3 d-none d-sm-block"><i class="iconfont icon-time"></i> 6天前</span>
+    	        	<span class="mr-3 d-none d-sm-block"><a href="/uncategorized/"><i class="iconfont icon-classification"></i> 未分类</a></span>    	        	<span class="mr-3 d-none d-sm-block"><i class="iconfont icon-time"></i> 2年前 (2021)</span>
 					<span class="mr-3"><a href="/author/1/" title="小竹同学"><i class="iconfont icon-user-circle"></i> 小竹同学</a></span>
 					<div class="flex-fill"></div>
-					<span class="views mr-3"><i class="iconfont icon-chakan"></i> 52</span>                	<span class="mr-3"><a class="smooth-n" href="#comments"> <i class="iconfont icon-comment"></i> 0</a></span>
+					<span class="views mr-3"><i class="iconfont icon-chakan"></i> 304</span>                	<span class="mr-3"><a class="smooth-n" href="#comments"> <i class="iconfont icon-comment"></i> 0</a></span>
                 	<span class="mr-3"><a class="btn-like btn-link-like " href="javascript:;" post_like data-id="341"><i class="iconfont icon-like"></i> <span class="like-count">0</span></a></span>
 					</div>
     	        </div>
@@ -353,7 +373,7 @@ img.emoji {
 							<div class="col-sm-12 col-lg-4 mb-3"><input type="text" name="url" id="url" class="form-control" value="" size="22" placeholder="（选填）网址" tabindex="4"></div>
 						</div>
 												<div class="com-footer text-right">
-							<input type="hidden" id="_wpnonce" name="_wpnonce" value="914b2e7eab"><input type="hidden" name="_wp_http_referer" value="/2021/07/28/%E7%BD%91%E7%AB%99%E8%B4%A1%E7%8C%AE%E8%80%85%E9%B8%A3%E8%B0%A2%E5%90%8D%E5%8D%95/">							<a rel="nofollow" id="cancel-comment-reply-link" style="display: none;" href="javascript:;" class="btn btn-light custom_btn-outline mx-2">再想想</a>
+							<input type="hidden" id="_wpnonce" name="_wpnonce" value="083f345329"><input type="hidden" name="_wp_http_referer" value="/2021/07/28/%E7%BD%91%E7%AB%99%E8%B4%A1%E7%8C%AE%E8%80%85%E9%B8%A3%E8%B0%A2%E5%90%8D%E5%8D%95/">							<a rel="nofollow" id="cancel-comment-reply-link" style="display: none;" href="javascript:;" class="btn btn-light custom_btn-outline mx-2">再想想</a>
 														<input class="btn btn-dark custom_btn-d" name="submit" type="submit" id="submit" tabindex="5" value="发表评论">
 														<input type="hidden" name="comment_post_ID" value="341" id="comment_post_ID">
 <input type="hidden" name="comment_parent" id="comment_parent" value="0">
@@ -400,10 +420,10 @@ img.emoji {
 	        	<span class="font-theme font-weight-bold text-md">2</span><small class="d-block text-xs text-muted">评论</small>
 	      	</a>
 	      	<a href="/author/1/" target="_blank" class="col">
-	        	<span class="font-theme font-weight-bold text-md">137,580</span><small class="d-block text-xs text-muted">浏览</small>
+	        	<span class="font-theme font-weight-bold text-md">494,077</span><small class="d-block text-xs text-muted">浏览</small>
 	      	</a>
 	      	<a href="/author/1/" target="_blank" class="col">
-	        	<span class="font-theme font-weight-bold text-md">229</span><small class="d-block text-xs text-muted">获赞</small>
+	        	<span class="font-theme font-weight-bold text-md">534</span><small class="d-block text-xs text-muted">获赞</small>
 	      	</a>
 	    </div>
 	</div>
@@ -426,14 +446,14 @@ img.emoji {
                 </div>
                 <div class="footer-inner">
                     <div class="footer-text">
-                                                Copyright © 2021 MyACG                         &nbsp;&nbsp;Design by <a href="/" target="_blank"><strong>ZJX</strong></a>&nbsp;&nbsp;|&nbsp;<a href="/donate/" target="_blank"><strong>Donate</strong></a>                                            </div>
+                        <span style="color: #ffffff;">------------</span> © 2023 MyACG &nbsp;&nbsp;Design by <a href="/" target="_blank"><strong>Z</strong></a>&nbsp;&nbsp;|&nbsp;<a href="/donate/" target="_blank"><strong>Donate</strong></a>                                            </div>
                 </div>
             </footer>
         </div>
 <!-- main-content end -->
     </div>
 <!-- page-container end -->
-    <div class="l2d_xb" data-api="/wp-content/plugins/poster-girl-l2d-2233-1.8">
+    <div class="l2d_xb" data-api="https://www.zjgsuzjx.top/wp-content/plugins/poster-girl-l2d-2233-1.8/">
         <div class="waifu">
             <div class="waifu-tips"></div>
             <canvas id="live2d" width="220" height="250" class="live2d"></canvas>
@@ -460,9 +480,9 @@ var theme = {"ajaxurl":"\/wp-admin\/admin-ajax.php","addico":"\/wp-content\/them
 <script type="text/javascript" src="/wp-content/themes/webstackpro/js/jquery.fancybox.min.js?ver=2.0406" id="lightbox-js-js"></script>
 <script type="text/javascript" src="/wp-content/themes/webstackpro/js/app.js?ver=2.0406" id="appjs-js"></script>
 <script type="text/javascript" src="https://ssl.captcha.qq.com/TCaptcha.js?ver=2.0406" id="captcha-js"></script>
-<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=5.5.5" id="comment-reply-js"></script>
+<script type="text/javascript" src="/wp-includes/js/comment-reply.min.js?ver=5.5.12" id="comment-reply-js"></script>
 <script type="text/javascript" src="/wp-content/themes/webstackpro/js/comments-ajax.js?ver=2.0406" id="comments-ajax-js"></script>
-<script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.5.5" id="wp-embed-js"></script>
+<script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.5.12" id="wp-embed-js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/xb2016/kratos-pjax@0.3.6/static/js/live2d.js?ver=l2d" id="waifu-l2d-js"></script>
 <script type="text/javascript" src="/wp-content/plugins/poster-girl-l2d-2233-1.8/js/waifu-tips.js?ver=1.7" id="waifu-js"></script>
     <script type="text/javascript">
@@ -483,11 +503,20 @@ var theme = {"ajaxurl":"\/wp-admin\/admin-ajax.php","addico":"\/wp-content\/them
 				</script>				<script>
 let tags=document.querySelectorAll("#tag_cloud-2 a,.list-group-item .pull-right");let colorArr=["#428BCA","#AEDCAE","#ECA9A7","#DA99FF","#FFB380","#D9B999"];tags.forEach(tag=>{tagsColor=colorArr[Math.floor(Math.random()*colorArr.length)];tag.style.backgroundColor=tagsColor});
 				</script><script>				$("body").css("cursor", "url('https://myacg.online/AliceStyle/static/mouse/dew/normal.cur'), default");
-				$("a").css("cursor", "url('https://myacg.online/AliceStyle/static/mouse/dew/link.cur'), pointer");</script><script type="text/javascript" src="https://myacg.online/AliceStyle/static/js/app/as-style.js"></script><script>console.log("n %c MyACG By zjgsuzjx | https://www.zjgsuzjx.top/","color:#fff;background: linear-gradient(to right , #7A88FF, #d27aff);padding:5px;border-radius: 10px;");</script>
+				$("a").css("cursor", "url('https://myacg.online/AliceStyle/static/mouse/dew/link.cur'), pointer");</script><script>console.log("n %c MyACG By Z| https://myacg.online/","color:#fff;background: linear-gradient(to right , #7A88FF, #d27aff);padding:5px;border-radius: 10px;");</script>
 
 <script src="https://www.zjgsuzjx.top/wp-content/themes/kratos-pjax-master/static/js/cursorEffects.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><!-- end 自定义代码 -->
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<script>
+    if (screen && screen.width > 480) {
+        var scriptTag = document.createElement('script');
+        scriptTag.src = '/wp-content/themes/webstackpro/js/Meting.min.js';
+        document.body.appendChild(scriptTag);
+    }
+</script>
+    <meting-js server="netease" type="playlist" id="2003373695" fixed="true" preload="none">
+    </meting-js><!-- end 自定义代码 -->
 <!-- require MetingJS -->
 <script>
 if (screen && screen.width > 480) {

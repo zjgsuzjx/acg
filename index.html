@@ -5468,7 +5468,35 @@ img.emoji {
                 <a href="/friends/" target="_blank" title="更多链接">更多链接</a>
             </div> 
         </div> 
-         
+        <script src="https://cdn.bootcss.com/sweetalert/2.1.0/sweetalert.min.js"></script>
+
+        <script>
+            // 检查本地存储中的标记
+            var isScriptDisplayed = localStorage.getItem('isScriptDisplayed');
+    
+            // 如果标记不存在，则显示脚本
+            if (!isScriptDisplayed) {
+                if (screen && screen.width > 480) {
+                    document.write('<script src="/wp-content/themes/webstackpro/js/myjs.js"><\/script>');
+                }
+    
+                // 将标记存储到本地存储中，有效期为一天
+                var tomorrow = new Date();
+                tomorrow.setDate(tomorrow.getDate() + 1);
+                localStorage.setItem('isScriptDisplayed', 'true');
+                localStorage.setItem('expirationDate', tomorrow.toUTCString());
+            } else {
+                // 检查标记的有效期
+                var expirationDate = new Date(localStorage.getItem('expirationDate'));
+                var currentDate = new Date();
+    
+                // 如果标记已过期，则删除标记
+                if (currentDate > expirationDate) {
+                    localStorage.removeItem('isScriptDisplayed');
+                    localStorage.removeItem('expirationDate');
+                }
+            }
+        </script>
            
     </div> 
              

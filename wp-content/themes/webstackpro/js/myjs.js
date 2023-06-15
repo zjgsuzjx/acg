@@ -1,6 +1,6 @@
 
 
-swal('【重要更新】\n1.修复部分问题并更新收录\n2.域名已更新请收藏：https://myacg.online/\n', '\n\n点击屏幕任意处关闭', 'success'); function AddFavorite(title, url) {
+swal('【重要更新】\n1.移除了全部的失效链接\n2.添加了新分类《轻小说》\n3.收录了大量新网站\n4.删除了不符合本站收录要求的网站\n5.修复了在线人数功能和其它bug\n', '\n\n点击屏幕任意处关闭', 'success'); function AddFavorite(title, url) {
 
     try {
 

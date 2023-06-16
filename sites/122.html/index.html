@@ -595,7 +595,22 @@ var theme = {"ajaxurl": "https:\/\/www.zjgsuzjx.top\/wp-admin\/admin-ajax.php","
         });
     });
     </script>
-<!-- 自定义代码 -->
+<script>
+        $("#switch-mode").click(function () {
+            if ($("body").hasClass("io-black-mode")) {
+                $("body").removeClass("io-black-mode");
+                $("body").addClass("io-grey-mode");
+                $("#bg_canvas").css("width", "100%");
+                $("#bg_canvas").css("height", "100%");
+            } else {
+                $("body").removeClass("io-grey-mode");
+                $("body").addClass("io-black-mode");
+                $("#bg_canvas").css("width", "0%");
+                $("#bg_canvas").css("height", "0%");
+            }
+        })
+    </script>
+    <!-- 自定义代码 -->
 			<script src="https://myacg.online/AliceStyle/static/js/bg/b4.js"></script>	
 <script>
 				let leftHeader=document.querySelectorAll("span.nav-icon>svg,span.nav-icon>i");let leftHeaderColorArr=["#FF69B4","#58c7ea","#E066FF","#FF69B4","#FFA54F","#90EE90"];leftHeader.forEach(tag=>{tagsColor=leftHeaderColorArr[Math.floor(Math.random()*leftHeaderColorArr.length)];tag.style.color=tagsColor});	

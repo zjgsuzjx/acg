@@ -325,23 +325,26 @@ img.emoji {
 <p><strong>1. ACG相关<br>
 </strong><strong>2. 无付费注册制度<br>
 </strong><strong>3. 离上次更新内容不能超过一个月<br>
-</strong><strong>4. 可以是非一般的CMS采集网站（不懂CMS的可忽略）<br>
+</strong><strong>4. 可以是资源丰富且高画质的CMS采集网站（不懂CMS的可忽略）<br>
 5. 网站非重定向<br>
 6. 网站主要内容非三次元<br>
 7. 无政治敏感问题<br>
 8. 无人民币内购资源制度，积分签到下载除外<br>
 9. 无月、季、年会员付费解锁<span style="color: orange;">主体</span>资源制度<br>
-10. 如果你发现你的投稿没有被收录，很大概率是已经存在这个网站了，分类可能和你想得有偏差，并不是我没有看见::&gt;_&lt;::<br>
+10. 如果你发现你的投稿没有被收录，很大概率是已经存在这个网站了，并不是我没有看见::&gt;_&lt;::<br>
 11. 若被采纳，网站详细内容处会加上你的署名。<br>
-12. 投稿请联系邮箱zjxsblog@163.com<br>
-13. 若不满足收录条件，建议转至友链申请。<br>
-14. 最终解释权归本站所有。<br>
+12. 投稿请通过下方面板，分类请选择【网站投稿】，并按提示填写。<br>
+13. 若不满足以上其中一条收录条件，建议转至友链申请，同样请通过下方面板申请，分类请选择【友情链接申请】，并按提示填写。<br>
+14. 目前不接受广告，目前不接受广告，目前不接受广告。<br>
+15. 最终解释权归本站所有。<br>
 </strong></p>
 <p><strong>意见反馈要求：</strong></p>
 <p><strong>1. 任何大小意见都可以提，例如某网站不符合本站规定要求，可以反馈</strong><br>
-<strong>2. 若被采纳，鸣谢处会加上你的署名。</strong></p>
+<strong>2. 若被采纳，鸣谢处会加上你的署名。</strong><br>
+<strong>3. 反馈请通过下方面板提交，并按提示填写。</strong>
+</p>
 <p>&nbsp;</p>
-<p><strong><span style="color: orange;">网页投稿和反馈正在内测中，现阶段请通过邮箱联系投稿。</span></strong></p>
+<p><strong><span style="color: orange;">投稿和反馈后需要等待一定的时间，会根据站长的忙碌程度无限制延长（严重的问题处理优先度最高）。</span></strong></p>
                                     	    		                 
                             </div> 
                         </div>
@@ -419,7 +422,8 @@ img.emoji {
                                             </div>
                                             <select name="tougao_cat" id="tougaocategorg_sites" class="form-control">
 	<option value="0" selected>选择分类 *</option>
-	<option class="level-0" value="2">投稿&nbsp;&nbsp;</option>
+	<option class="level-0" value="2">网站投稿&nbsp;&nbsp;</option>
+    <option class="level-0" value="3">友情链接申请&nbsp;&nbsp;</option>
 </select>
                                         </div>
                                     </div>
@@ -598,7 +602,8 @@ img.emoji {
                                             </div>
                                             <select name="tougao_cat" id="tougaocategorg_down" class="form-control">
 	<option value="0" selected>选择分类 *</option>
-	<option class="level-0" value="2">投稿&nbsp;&nbsp;</option>
+	<option class="level-0" value="2">网站投稿&nbsp;&nbsp;</option>
+    <option class="level-0" value="3">友情链接申请&nbsp;&nbsp;</option>
 </select>
                                         </div>
                                     </div>
@@ -622,8 +627,8 @@ img.emoji {
                                         </div>
                                                                             </div>
                                                                         <div class="col-12 col-md-3 my-2">
-                                                                            <button class="btn btn-danger custom_btn-d text-sm col-12 custom-submit">提交（内测中）</button>
-                                    </div> 
+                                                                            <button id="myButton" class="btn btn-danger custom_btn-d text-sm col-12 custom-submit">提交【请务必先阅读投稿要求】</button>
+                                    </div>
                                 </div> 
                     </div> 
 	    	    </div> 
@@ -685,7 +690,34 @@ img.emoji {
             data:     $(this).serialize() + "&action=contribute_post&_ajax_nonce=b0d6a1b2d2&tcaptcha_ticket="+$('#tcaptcha_ticket').val()+"&tcaptcha_randstr="+$('#tcaptcha_randstr').val(), 
         }).done(function (result) {
             if(result.status == 1){
-                                verification = Math.floor(Math.random()*(9999-1000+1)+1000);
+                // 在这里添加倒计时代码
+                var button = document.getElementById("myButton");
+                var countdown = 30;
+                var isCounting = false;
+
+                function startCountdown() {
+                    if (!isCounting) {
+                        isCounting = true;
+                        button.disabled = true;
+                        button.innerText = countdown + "秒后可再次提交";
+
+                        var interval = setInterval(function () {
+                            countdown--;
+                            button.innerText = countdown + "秒后可再次提交";
+
+                            if (countdown <= 0) {
+                                clearInterval(interval);
+                                button.disabled = false;
+                                button.innerText = "提交【请务必先阅读投稿要求】";
+                                isCounting = false;
+                                countdown = 30;
+                            }
+                        }, 1000);
+                    }
+                }
+
+                startCountdown();
+                verification = Math.floor(Math.random()*(9999-1000+1)+1000);
                 $('.verification-text').text(verification);
                                 $(':input','.i-tougao') 
                 .not(':button, :submit, :reset, :hidden') 
@@ -826,7 +858,7 @@ img.emoji {
 <link rel="stylesheet" id="waifu-css" href="/wp-content/plugins/poster-girl-l2d-2233-1.8/css/waifu.min.css?ver=1.7" type="text/css" media="all">
 <script type="text/javascript" id="popper-js-extra">
 /* <![CDATA[ */
-var theme = {"ajaxurl": "https:\/\/www.zjgsuzjx.top\/wp-admin\/admin-ajax.php","addico":"\/wp-content\/themes\/webstackpro\/images\/add.png","order":"asc","formpostion":"top","defaultclass":"io-grey-mode","isCustomize":"1","icourl":"https:\/\/api.iowen.cn\/favicon\/","icopng":".png","urlformat":"1","customizemax":"10","newWindow":"1","lazyload":"1","minNav":"","loading":"0"};
+var theme = {"ajaxurl": "https:\/\/www.zjgsuzjx.top\/acg\/wp-admin\/admin-ajax.php","addico":"\/wp-content\/themes\/webstackpro\/images\/add.png","order":"asc","formpostion":"top","defaultclass":"io-grey-mode","isCustomize":"1","icourl":"https:\/\/api.iowen.cn\/favicon\/","icopng":".png","urlformat":"1","customizemax":"10","newWindow":"1","lazyload":"1","minNav":"","loading":"0"};
 /* ]]> */
 </script>
 <script type="text/javascript" src="/wp-content/themes/webstackpro/js/popper.min.js?ver=2.0406" id="popper-js"></script>

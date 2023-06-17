@@ -591,6 +591,64 @@ img.emoji {
     	</div>
   	</div>
              
+            <script>
+    // 获取点赞数
+    function getLikeCount(id) {
+        const url = 'https://www.zjgsuzjx.top/acg/wp-content/themes/webstackpro/like-count.php';
+        const params = new URLSearchParams({ id });
+
+        fetch(`${url}?${params}`)
+            .then(response => response.text())
+            .then(likeCount => {
+            // 在这里处理点赞数
+            // console.log('点赞数:', likeCount);
+
+            // 将点赞数插入到元素中
+            const likeCountElement = document.querySelector('.like-count');
+            if (likeCountElement) {
+                likeCountElement.textContent = likeCount;
+            }
+            })
+            .catch(error => {
+            // 处理错误
+            console.error('请求出错:', error);
+            });
+    }
+
+    // 获取浏览量
+    function getViewCount(id) {
+        const url = 'https://www.zjgsuzjx.top/acg/wp-content/themes/webstackpro/view-count.php';
+        const params = new URLSearchParams({ id });
+
+        fetch(`${url}?${params}`)
+            .then(response => response.text())
+            .then(viewCount => {
+            // 在这里处理点赞数
+            // console.log('点赞数:', likeCount);
+
+            // 将点赞数插入到元素中
+            const likeCountElement = document.querySelector('.share-count');
+            if (likeCountElement) {
+                likeCountElement.textContent = viewCount;
+            }
+            })
+            .catch(error => {
+            // 处理错误
+            console.error('请求出错:', error);
+            });
+    }
+
+    // 获取包含data-id的HTML元素
+    const likeButton = document.querySelector('[data-id]');
+
+    // 提取ID并发送请求
+    if (likeButton) {
+    const id = likeButton.getAttribute('data-id');
+    getLikeCount(id);
+    getViewCount(id);
+    }
+</script>
+             
             <footer class="main-footer footer-type-1 text-xs">
                 <div id="footer-tools" class="d-flex flex-column">
                     <a href="javascript:/" id="go-to-up" class="btn rounded-circle go-up m-1" rel="go-top">

@@ -326,7 +326,7 @@ img.emoji {
                                         <a href="javascript:;" post_like data-id="192" class=" btn btn-like btn-icon btn-light rounded-circle p-2 mx-3 mx-md-2 " data-toggle="tooltip" data-placement="top" title="点赞">
                                             <span class="flex-column text-height-xs">
                                                 <i class="icon-lg iconfont icon-like"></i>
-                                                <small class="like-count text-xs mt-1">2</small>
+                                                <small class="like-count text-xs mt-1">loading...</small>
                                             </span>
                                         </a>
                                         <a href="javascript:;" class="btn-share-toggler btn btn-icon btn-light rounded-circle p-2 mx-3 mx-md-2" data-toggle="tooltip" data-placement="top" title="浏览">
@@ -573,6 +573,64 @@ img.emoji {
                 console.log('网络错误 --.'); 
             }
 		});
+    }
+</script>
+             
+            <script>
+    // 获取点赞数
+    function getLikeCount(id) {
+        const url = 'https://www.zjgsuzjx.top/acg/wp-content/themes/webstackpro/like-count.php';
+        const params = new URLSearchParams({ id });
+
+        fetch(`${url}?${params}`)
+            .then(response => response.text())
+            .then(likeCount => {
+            // 在这里处理点赞数
+            // console.log('点赞数:', likeCount);
+
+            // 将点赞数插入到元素中
+            const likeCountElement = document.querySelector('.like-count');
+            if (likeCountElement) {
+                likeCountElement.textContent = likeCount;
+            }
+            })
+            .catch(error => {
+            // 处理错误
+            console.error('请求出错:', error);
+            });
+    }
+
+    // 获取浏览量
+    function getViewCount(id) {
+        const url = 'https://www.zjgsuzjx.top/acg/wp-content/themes/webstackpro/view-count.php';
+        const params = new URLSearchParams({ id });
+
+        fetch(`${url}?${params}`)
+            .then(response => response.text())
+            .then(viewCount => {
+            // 在这里处理点赞数
+            // console.log('点赞数:', likeCount);
+
+            // 将点赞数插入到元素中
+            const likeCountElement = document.querySelector('.share-count');
+            if (likeCountElement) {
+                likeCountElement.textContent = viewCount;
+            }
+            })
+            .catch(error => {
+            // 处理错误
+            console.error('请求出错:', error);
+            });
+    }
+
+    // 获取包含data-id的HTML元素
+    const likeButton = document.querySelector('[data-id]');
+
+    // 提取ID并发送请求
+    if (likeButton) {
+    const id = likeButton.getAttribute('data-id');
+    getLikeCount(id);
+    getViewCount(id);
     }
 </script>
              

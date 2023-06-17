@@ -616,7 +616,7 @@ v3在启动前还要自己调整一下服务器设置，请自己根据本体文
             if(data.status == 'success'){
                 $("#country").html('<i class="iconfont icon-globe mr-1"><\/i>'+ data.country); 
                 $.ajax({
-		        	url : "/wp-admin/admin-ajax.php",  
+		        	url : "https://www.zjgsuzjx.top/acg/wp-admin/admin-ajax.php",  
 		        	data : {
 		        		action: "io_set_country",
 		        		country: data.country,
@@ -635,7 +635,7 @@ v3在启动前还要自己调整一下服务器设置，请自己根据本体文
     }
     function updateStatus(isInvalid){ 
 		$.ajax({
-			url : "/wp-admin/admin-ajax.php",  
+			url : "https://www.zjgsuzjx.top/acg/wp-admin/admin-ajax.php",  
 			data : {
 				action: "link_failed",
 				is_inv: isInvalid,

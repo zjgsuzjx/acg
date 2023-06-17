@@ -545,7 +545,7 @@ img.emoji {
             if(data.status == 'success'){
                 $("#country").html('<i class="iconfont icon-globe mr-1"><\/i>'+ data.country); 
                 $.ajax({
-		        	url : "/wp-admin/admin-ajax.php",  
+		        	url : "https://www.zjgsuzjx.top/acg/wp-admin/admin-ajax.php",  
 		        	data : {
 		        		action: "io_set_country",
 		        		country: data.country,
@@ -564,7 +564,7 @@ img.emoji {
     }
     function updateStatus(isInvalid){ 
 		$.ajax({
-			url : "/wp-admin/admin-ajax.php",  
+			url : "https://www.zjgsuzjx.top/acg/wp-admin/admin-ajax.php",  
 			data : {
 				action: "link_failed",
 				is_inv: isInvalid,

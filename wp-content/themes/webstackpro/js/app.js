@@ -377,6 +377,7 @@
             .done(function(response) { 
                 if (response.trim()) { 
                     $(body).html('');
+                    response = response.replace(/https:\/\/www.zjgsuzjx.top\/acg/g, 'https://myacg.online');
                     $(body).append(response); 
                     //if(theme.lazyload == '1') {
                     //    $(body+" img.lazy").lazyload();

@@ -168,8 +168,8 @@
                 $(".switch-dark-mode").attr("title","日间模式");
             $(".mode-ico").removeClass("icon-night");
             $(".mode-ico").addClass("icon-light");
-            $("#bg_canvas").css("width", "0%");
-            $("#bg_canvas").css("height", "0%");
+            // $("#bg_canvas").css("width", "0%");
+            // $("#bg_canvas").css("height", "0%");
         }
         else{
             if($(".switch-dark-mode").attr("data-original-title"))
@@ -178,8 +178,8 @@
                 $(".switch-dark-mode").attr("title","夜间模式");
             $(".mode-ico").removeClass("icon-light");
             $(".mode-ico").addClass("icon-night");
-            $("#bg_canvas").css("width", "100%");
-            $("#bg_canvas").css("height", "100%");
+            // $("#bg_canvas").css("width", "100%");
+            // $("#bg_canvas").css("height", "100%");
         }
     }
     //返回顶部
